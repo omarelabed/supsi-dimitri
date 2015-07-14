@@ -15,7 +15,7 @@ var config = {
 	}
 }
 
-var fixedMenu = function($fm){
+var fixedMenu = function(){
 	var module = {};
 	$fm = ($fm.hasClass('fixed-menu') ? $fm : $fm.find('.fixed-menu'));
 	// actions
@@ -38,7 +38,7 @@ var fixedMenu = function($fm){
 	}
 
 	// initializations
-	module.init = function() {
+	module.init = function($fm) {
 		module.initToggle();
 		module.toggle();
 		module.initOnResize();
