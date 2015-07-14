@@ -98,6 +98,10 @@ article {
 		font-size: 2em;
 		margin: 2em 0 .5em 0;
 	}
+	h2 {
+		font-size: 1.5em;
+		margin: 2em 0 .5em 0;
+	}
 }
 
 /*img { -webkit-filter: grayscale(100%); filter: grayscale(100%); } */
@@ -466,7 +470,7 @@ article {
 	background-color: $color-xlight-gray; 
 	padding: 20px 0;
 	.info-label {
-		font-size: 150%;
+		// font-size: 150%;
 		padding: 8px 10px;
 		display: block;
 	}

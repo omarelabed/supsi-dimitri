@@ -15,22 +15,22 @@ var config = {
 	}
 }
 
-var fixedMenu = function(){
-	var module = {},
-		$fm = $('.fixed-menu');
+var fixedMenu = function($fm){
+	var module = {};
+	$fm = ($fm.hasClass('fixed-menu') ? $fm : $fm.find('.fixed-menu'));
 	// actions
 	module.toggle = function(close) {
 		var bm = config.mediaQueries['$break-medium'],
-			top = parseInt($fm.css('top')),
-			w = $(window).outerWidth();
+		top = parseInt($fm.css('top')),
+		w = $(window).outerWidth();
 		if (Modernizr.mq('(min-width: ' + bm + ')')) {
 			$fm.removeAttr('style');
 			return;
 		}
 		if (close || top===0) {
 			var mh = $fm.height(),
-				th = $fm.find('.toggle').height(),
-				top = (th - mh);
+			th = $fm.find('.toggle').height(),
+			top = (th - mh);
 		} else {
 			top = 0;
 		}
@@ -54,11 +54,31 @@ var fixedMenu = function(){
 			module.toggle(true);
 		});
 	}
-	return module;	
+	return module;
 }
+
+var cover = function(){
+	var module = {};
+	module.init = function($cover){
+		module.cover = $cover;
+		$cover.css('cursor', 'pointer');
+		$cover.click(function(e){
+			e.preventDefault();
+			var target = $cover.data('target'),
+				diff = $('.fixed-menu>nav').height() + $('.fixed-toolbar').height(),
+				offset = $(target).offset().top - diff;
+			$('html, body').animate({
+				scrollTop: offset
+			});
+		});
+	}
+	return module;
+}
+
 
 var modules = {
 	// fixedMenu: fixedMenu()
+	cover: cover()
 };
 
 $('[data-modules').each(function(){
@@ -67,7 +87,7 @@ $('[data-modules').each(function(){
 		var moduleName = moduleNames[i];
 		if (modules.hasOwnProperty(moduleName)) {
 			if (modules[moduleName].init) {
-				modules[moduleName].init();
+				modules[moduleName].init($(this));
 			}
 		}
 	}
