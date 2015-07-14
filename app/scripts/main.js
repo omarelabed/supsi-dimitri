@@ -15,48 +15,6 @@ var config = {
 	}
 }
 
-var fixedMenu = function(){
-	var module = {};
-	$fm = ($fm.hasClass('fixed-menu') ? $fm : $fm.find('.fixed-menu'));
-	// actions
-	module.toggle = function(close) {
-		var bm = config.mediaQueries['$break-medium'],
-		top = parseInt($fm.css('top')),
-		w = $(window).outerWidth();
-		if (Modernizr.mq('(min-width: ' + bm + ')')) {
-			$fm.removeAttr('style');
-			return;
-		}
-		if (close || top===0) {
-			var mh = $fm.height(),
-			th = $fm.find('.toggle').height(),
-			top = (th - mh);
-		} else {
-			top = 0;
-		}
-		$fm.animate({'top': top + 'px'}, 'fast');
-	}
-
-	// initializations
-	module.init = function($fm) {
-		module.initToggle();
-		module.toggle();
-		module.initOnResize();
-	};
-	module.initToggle = function() {
-		$fm.find('.toggle').click(function(e){
-			e.preventDefault();
-			module.toggle();
-		});
-	}
-	module.initOnResize = function(){
-		$(window).resize(function(){
-			module.toggle(true);
-		});
-	}
-	return module;
-}
-
 var cover = function(){
 	var module = {};
 	module.init = function($cover){
@@ -77,7 +35,6 @@ var cover = function(){
 
 
 var modules = {
-	// fixedMenu: fixedMenu()
 	cover: cover()
 };
 
