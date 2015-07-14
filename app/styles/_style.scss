@@ -326,7 +326,7 @@ article {
 	padding: 0px;
 
 
-	.item {
+	.col-item {
 		width: 100%;
 		position:relative;
 		padding: 10px 10px 0 10px;
@@ -400,7 +400,7 @@ article {
 	border-right	: 1px dotted $color-light-gray;
 	padding: 0;
 
-	.item {
+	.col-item {
 		width: 100%;
 		padding: 10px 10px;
 		border-bottom: 1px dotted $color-light-gray;
@@ -435,7 +435,7 @@ article {
 .col-additional {
 	padding: 10px 10px 0 10px;
 	font-size: $typeface-size-medium;
-	.item {
+	.col-item {
 		width: 100%;
 		padding: 10px 15px;
 		background-color: $color-light-gray;
