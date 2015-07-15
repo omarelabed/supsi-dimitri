@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="">
+@@include('partials/head.html')
+<body>
+	@@include('partials/headers.html')
+	<div class="fullscreen-background">
+		<div class="information">
+			<p class="data">12.01.2015</p>
+			<h1>DANZA NEL VUOTO <br />// LIVE PERFORMANCE</h1>
+		</div>
+		<div class="overlay" data-modules="cover" data-target="#coverScrolltoHome"></div>                 
+		<div class="clearfix"></div>
+	</div>
+	<div class="container-fluid" id="coverScrolltoHome">
+		<div class="row row-information">
+			<div class="col-sm-5"><h3>Primo piano</h3></div>
+			<div class="col-sm-4"><h3>Novità/Comunicati</h3></div>
+			<div class="col-sm-3"><h3>Formazione</h3></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-5 col-events">
+				<div class="col-item">
+					<div class="information">
+						<p class="data">Evento, 12.01.2015</p>
+						<h2>Nome evento 1</h2>
+					</div>
+					<div class="overlay"></div>
+					<img src="images/thumb/4.jpg">                   
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-item">
+					<div class="information">
+						<p class="data">Evento, 12.01.2015</p>
+						<h2>Nome evento 1</h2>
+					</div>                        
+					<img src="images/thumb/5.jpg">  
+					<div class="overlay"></div>                 
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-news">
+				@@include('partials/news-content.html')
+			</div>
+			<div class="col-sm-3 col-additional">
+				<div class="col-item">
+					<a href="bachelor.html" title="Bachelor">
+						<div class="content">
+							<p class="sub-title">Procedura di ammissione</p>
+							<p class="title">
+								Bachelor <br />
+								of Arts <br />
+								in Theater
+							</p>
+						</div>
+					</a>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-item">
+					<a href="bachelor.html" title="Bachelor">
+						<div class="content">
+							<p class="sub-title">Procedura di ammissione</p>
+							<p class="title">
+								Bachelor <br />
+								of Arts <br />
+								in Theater
+							</p>
+						</div>
+					</a>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('partials/footer.html')
+	@@include('partials/scripts.html')
+</body>
+</html>

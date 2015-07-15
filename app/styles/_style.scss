@@ -395,6 +395,9 @@ article {
 		min-width: 100%;
 	}
 }
+.event-tile {
+	@extend .thumb-tile;
+}
 .col-news, .col-thumbs {
 	font-size: $typeface-size-medium;
 	border-left: 1px dotted $color-light-gray;

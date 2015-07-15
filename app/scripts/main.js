@@ -1,11 +1,12 @@
-"use strict";
+/*global $:false */
+'use strict';
 
 // CONFIGS //
 var config = {
 	mediaQueries: {
-		/* Custom, iPhone Retina */ 
+		/* Custom, iPhone Retina */
 		'$break-extra-small': '320px',
-		/* Extra Small Devices, Phones */ 
+		/* Extra Small Devices, Phones */
 		'$break-small': '480px',
 		/* Small Devices, Tablets */
 		'$break-medium': '768px',
@@ -15,7 +16,7 @@ var config = {
 		'$break-extra-large': '1200px'
 	},
 	defaultModules: ['headers']
-}
+};
 
 // MODULES //
 
@@ -24,7 +25,6 @@ var cover = function(){
 	var module = {};
 	module.init = function($cover){
 		module.cover = $cover;
-		console.log($cover);
 		$cover.css('cursor', 'pointer');
 		$cover.click(function(e){
 			e.preventDefault();
@@ -35,21 +35,22 @@ var cover = function(){
 				scrollTop: offset
 			});
 		});
-	}
+	};
 	return module;
-}
+};
 
 // headers module
 var headers = function(){
 	var module = {};
 	module.init = function($headers){
+		module.headers = $headers;
 		$(window).resize(function(){
 			var top = $('.fixed-menu>nav').height() + $('.fixed-toolbar').height();
-			$('.main-content').css('margin-top', top+'px');
+			$('.main-content').css('margin-top', top + 'px');
 		});
-	}
+	};
 	return module;
-}
+};
 
 // register module
 var modules = {
@@ -67,14 +68,14 @@ var deployModule = function(moduleName, $el){
 			modules[moduleName].init($el);
 		}
 	}
-}
+};
 
 // deploy modules from js
 var deployDefaultModules = function(){
 	for (var i in config.defaultModules) {
 		deployModule(config.defaultModules[i]);
 	}
-}
+};
 
 // deploy modules on DOM
 var deployDynamicModules = function() {
@@ -85,13 +86,13 @@ var deployDynamicModules = function() {
 			deployModule(moduleName, $(this));
 		}
 	});
-}
+};
 
 // deploy all modules
 var deployModules = function(){
 	deployDefaultModules();
 	deployDynamicModules();
-}
+};
 
 // initialize modules
 deployModules();
