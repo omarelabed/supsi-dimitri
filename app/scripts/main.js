@@ -15,7 +15,10 @@ var config = {
 		/* Large Devices, Wide Screens */
 		'$break-extra-large': '1200px'
 	},
-	defaultModules: ['headers']
+	defaultModules: [
+		'isotope',
+		'headers'
+	]
 };
 
 // MODULES //
@@ -29,8 +32,8 @@ var cover = function(){
 		$cover.click(function(e){
 			e.preventDefault();
 			var target = $cover.data('target'),
-				diff = $('.fixed-menu>nav').height() + $('.fixed-toolbar').height(),
-				offset = $(target).offset().top - diff;
+			diff = $('.fixed-menu>nav').height() + $('.fixed-toolbar').height(),
+			offset = $(target).offset().top - diff;
 			$('html, body').animate({
 				scrollTop: offset
 			});
@@ -52,10 +55,31 @@ var headers = function(){
 	return module;
 };
 
-// register module
+// isotope
+var isotope = function(){
+	var module = {};
+	module.init = function($grid){
+		$grid = (typeof $grid === 'undefined' ? $('.grid') : $grid);
+		module.grid = $grid;
+		$grid.on('layoutComplete', function(event) {
+			var el = $(this);
+			console.log(el);
+			$(this).siblings('.grid-overlay').fadeOut();
+		});
+		$grid.isotope({
+			itemSelector: '.grid-item',
+			layoutMode: 'masonry'
+		});
+	};
+	return module;
+};
+
+
+// register modules
 var modules = {
 	cover: cover(),
-	headers: headers()
+	headers: headers(),
+	isotope: isotope()
 };
 
 
@@ -78,7 +102,7 @@ var deployDefaultModules = function(){
 };
 
 // deploy modules on DOM
-var deployDynamicModules = function() {
+var deployDomModules = function() {
 	$('[data-modules').each(function(){
 		var moduleNames = $(this).data('modules').split(',');
 		for (var i in moduleNames) {
@@ -91,7 +115,7 @@ var deployDynamicModules = function() {
 // deploy all modules
 var deployModules = function(){
 	deployDefaultModules();
-	deployDynamicModules();
+	deployDomModules();
 };
 
 // initialize modules

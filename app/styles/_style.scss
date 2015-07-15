@@ -41,6 +41,7 @@ $break-extra-large:	1200px;
 /* sizes */
 $fixed-toolbar-height: 35px;
 $col-slim-margin-bottom: 5em;
+$grid-padding: 0.5em;
 
 /* mixins */
 /*
@@ -518,3 +519,50 @@ footer {
 	padding: 100px;
 }
 
+/* isotope */
+.grid {
+	.grid-item {
+		position: relative;
+		width: 25%;
+		padding: $grid-padding;
+	}
+	.grid-item--width2 {
+		width: 50%;
+	}
+}
+.grid-wrapper {
+    position: relative;
+}
+
+.grid-overlay {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.thumb-tile .information {
+	position: absolute;
+	bottom: .5em;
+	padding: .5em;
+	color: #fff;
+	z-index: 2;
+	left: .5em;
+	right: .5em;
+}
+
+.overlay {
+	z-index: 1;
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	top: $grid-padding;
+	left: $grid-padding;
+	bottom: $grid-padding;
+	right: $grid-padding;
+	background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+}
