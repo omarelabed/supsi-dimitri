@@ -38,9 +38,9 @@ $break-large:	992px;
 /* Large Devices, Wide Screens */
 $break-extra-large:	1200px;
 
-/* heights */
+/* sizes */
 $fixed-toolbar-height: 35px;
-
+$col-slim-margin-bottom: 5em;
 
 /* mixins */
 /*
@@ -375,13 +375,14 @@ article {
 	}	
 }
 .thumb-tiles {
+	padding: 0 0 0 1em;
 	.thumb-tile {
 		// width: 200px;
 		height: 12em;
 		overflow: hidden;
 		// margin: 10px;
 		position: relative;
-		margin: 2em 0 0 0;
+		margin: 1em 1em (-$col-slim-margin-bottom) 0;
 	}
 	img {
 		position:absolute;
@@ -460,7 +461,7 @@ article {
 
 .col-slim-clear {
 	padding: 0;
-	margin-bottom: 5em;
+	margin-bottom: $col-slim-margin-bottom;
 }
 .col-slim {
 	@extend .col-slim-clear;
@@ -468,7 +469,7 @@ article {
 		border-left: 1px dotted #f0f0f0;
 	}
 	section {
-		margin-bottom: 5em;
+		margin-bottom: $col-slim-margin-bottom;
 	}
 }	
 
