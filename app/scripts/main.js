@@ -23,6 +23,16 @@ var config = {
 
 // MODULES //
 
+var helpers = {
+	getHeadersTop : function(){
+		var fh = $('.fixed-toolbar').height(),
+			bs = parseInt(config.mediaQueries['$break-medium']);
+		fh = ($(window).width() < bs ? 0 : fh);
+		var top = $('.fixed-menu>nav').height() + fh;
+		return top;
+	}
+};
+
 // cover module
 var cover = function(){
 	var module = {};
@@ -32,8 +42,8 @@ var cover = function(){
 		$cover.click(function(e){
 			e.preventDefault();
 			var target = $cover.data('target'),
-			diff = $('.fixed-menu>nav').height() + $('.fixed-toolbar').height(),
-			offset = $(target).offset().top - diff;
+				diff = helpers.getHeadersTop(),
+				offset = $(target).offset().top - diff;
 			$('html, body').animate({
 				scrollTop: offset
 			});
@@ -53,10 +63,7 @@ var headers = function(){
 		module.setContentMargin();
 	};
 	module.setContentMargin = function(){
-		var fh = $('.fixed-toolbar').height(),
-			bs = parseInt(config.mediaQueries['$break-medium']);
-		fh = ($(window).width() < bs ? 0 : fh);
-		var top = $('.fixed-menu>nav').height() + fh;
+		var top = helpers.getHeadersTop();
 		$('.main-content').css('margin-top', top + 'px');
 	}
 	return module;

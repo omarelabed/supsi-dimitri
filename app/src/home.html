@@ -12,14 +12,9 @@
 		<div class="clearfix"></div>
 	</div>
 	<div class="container-fluid" id="coverScrolltoHome">
-		<div class="row row-information">
-			<div class="col-sm-5"><h3>Primo piano</h3></div>
-			<div class="col-sm-4"><h3>Novità/Comunicati</h3></div>
-			<div class="col-sm-3"><h3>Formazione</h3></div>
-		</div>
-
 		<div class="row">
-			<div class="col-sm-5 col-events">
+			<div class="col-sm-5 col-events col-slim">
+				@@include('partials/row-information.html', {"text": "Primo piano"})
 				<div class="col-item">
 					<div class="information">
 						<p class="data">Evento, 12.01.2015</p>
@@ -39,10 +34,12 @@
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			<div class="col-sm-4 col-news">
+			<div class="col-sm-4 col-news col-slim">
 				@@include('partials/news-content.html')
 			</div>
-			<div class="col-sm-3 col-additional">
+			<div class="col-sm-3 col-slim">
+				@@include('partials/row-information.html', {"text": "Formazione"})
+				<div class="col-additional">
 				<div class="col-item">
 					<a href="bachelor.html" title="Bachelor">
 						<div class="content">
@@ -68,6 +65,7 @@
 						</div>
 					</a>
 					<div class="clearfix"></div>
+				</div>
 				</div>
 			</div>
 		</div>
