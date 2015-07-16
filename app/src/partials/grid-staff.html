@@ -1,4 +1,10 @@
 <div class="grid-wrapper" data-modules="isotope">
+	<div class="grid-filters">
+		<a class="grid-filter active" href="javascript:void(0);" data-filter='*'>Tutti i docenti</a>,
+		<a class="grid-filter" href="javascript:void(0);" data-filter='.bachelor'>Bachelor</a>,
+		<a class="grid-filter" href="javascript:void(0);" data-filter='.master'>Master</a>,
+		<a class="grid-filter" href="javascript:void(0);" data-filter='.lecturer'>Lecturer</a>
+	</div>
 	<div class="grid">
 		@@include('grid-item-staff.html', {
 			"src" : "images/thumb/bio.jpg",
@@ -9,13 +15,13 @@
 		@@include('grid-item-staff.html', {
 			"src" : "images/thumb/bio1.jpg",
 			"name": "Sherman Klump",
-			"roleClass" : "bachelor",
+			"roleClass" : "master",
 			"roleLabel" : "Docente Bachelor"
 		})
 		@@include('grid-item-staff.html', {
 			"src" : "images/thumb/bio2.jpg",
 			"name": "Malcolm Sayer",
-			"roleClass" : "master",
+			"roleClass" : "lecturer",
 			"roleLabel" : "Docente Master"
 		})
 		@@include('grid-item-staff.html', {
@@ -27,13 +33,13 @@
 		@@include('grid-item-staff.html', {
 			"src" : "images/thumb/bio1.jpg",
 			"name": "Sherman Klump",
-			"roleClass" : "bachelor",
+			"roleClass" : "master",
 			"roleLabel" : "Docente Bachelor"
 		})
 		@@include('grid-item-staff.html', {
 			"src" : "images/thumb/bio2.jpg",
 			"name": "Malcolm Sayer",
-			"roleClass" : "master",
+			"roleClass" : "lecturer",
 			"roleLabel" : "Docente Master"
 		})
 		@@include('grid-item-staff.html', {
@@ -45,15 +51,34 @@
 		@@include('grid-item-staff.html', {
 			"src" : "images/thumb/bio1.jpg",
 			"name": "Sherman Klump",
-			"roleClass" : "bachelor",
+			"roleClass" : "master",
 			"roleLabel" : "Docente Bachelor"
 		})
 		@@include('grid-item-staff.html', {
 			"src" : "images/thumb/bio2.jpg",
 			"name": "Malcolm Sayer",
-			"roleClass" : "master",
+			"roleClass" : "lecturer",
 			"roleLabel" : "Docente Master"
 		})
+		@@include('grid-item-staff.html', {
+			"src" : "images/thumb/bio.jpg",
+			"name" : "Walter White",
+			"roleClass" : "bachelor",
+			"roleLabel" : "Docente Bachelor"
+		})
+		@@include('grid-item-staff.html', {
+			"src" : "images/thumb/bio1.jpg",
+			"name": "Sherman Klump",
+			"roleClass" : "master",
+			"roleLabel" : "Docente Bachelor"
+		})
+		@@include('grid-item-staff.html', {
+			"src" : "images/thumb/bio2.jpg",
+			"name": "Malcolm Sayer",
+			"roleClass" : "lecturer",
+			"roleLabel" : "Docente Master"
+		})
+
 	</div>
 	<div class="grid-overlay"></div>
 </div>

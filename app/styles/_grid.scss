@@ -1,16 +1,22 @@
+$grid-item-width: 1/3 * 100%;
+$grid-item-width-sm-100: 1/4 * 100%;
+$grid-item-width-md: 1/2 * 100%;
+$grid-item-width-lg: $grid-item-width; // 1/3 * 100%
+
 /* isotope */
 .grid {
 	.overlay {
 		background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
 	}
-	.grid-item--width2 {
-		width: 50%;
-	}
 }
 .grid-item {
 	position: relative;
-	width: 1/3 * 100%;
+	width: $grid-item-width;
 	padding: $grid-padding;
+	overflow: hidden;
+}
+.grid-item--width2 {
+	width: $grid-item-width * 2;
 }
 .grid-wrapper {
     position: relative;
@@ -24,6 +30,12 @@
     left: 0;
     right: 0;
     z-index: 99;
+}
+.grid-filters {
+	padding: 2em 1em 1em 1em;
+}
+.grid-filter.active {
+	font-weight: bold;
 }
 
 .thumb-tile .information {
@@ -50,17 +62,11 @@
 }
 
 @media screen and (min-width: $break-small+100) {
-	.grid-item {
-		width: 1/4 * 100%;
-	}
+	@include grid-item-width($grid-item-width-sm-100)
 }
 @media (min-width: $break-medium) {
-	.grid-item {
-		width: 1/2 * 100%;
-	}
+	@include grid-item-width($grid-item-width-md)
 }
 @media (min-width: $break-large) {
-	.grid-item {
-		width: 1/3 * 100%;
-	}
+	@include grid-item-width(1/3 * 100%)
 }

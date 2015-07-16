@@ -46,6 +46,23 @@ $grid-padding: 0.5em;
 
 
 /* mixins */
+@mixin grid-item-width($n){
+	.grid-item {
+		width: $n;
+		// .thumb-tile {
+		// 	max-height: 12em;
+		// 	overflow: hidden;
+		// }
+	}
+	.grid-item--width2 {
+		width: $n * 2;
+	}
+	// .grid-item--height2 {
+	// 	height: $n;
+	// }
+}
+
+
 /*
 @mixin menu-link() {
 	a {
@@ -59,3 +76,4 @@ $grid-padding: 0.5em;
 	}
 }
 */
+

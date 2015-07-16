@@ -79,6 +79,10 @@ var isotope = function(){
 		}
 		if ($grid.length === 0) return;
 		module.grid = $grid;
+		module.initIsotope($grid);
+		module.initFilters($grid);
+	};
+	module.initIsotope = function($grid) {
 		$grid.on('layoutComplete', function(event) {
 			var el = $(this);
 			$(this).siblings('.grid-overlay').fadeOut();
@@ -87,6 +91,16 @@ var isotope = function(){
 			itemSelector: '.grid-item',
 			layoutMode: 'masonry'
 		});
+	};
+	module.initFilters = function($grid) {
+		$grid.siblings('.grid-filters')
+			.find('[data-filter]')
+			.click(function(){
+				var $el = $(this),
+					filter = $el.data('filter');
+				$el.addClass('active').siblings('.grid-filter').removeClass('active');
+				$grid.isotope({filter: filter});
+			});
 	};
 	return module;
 };

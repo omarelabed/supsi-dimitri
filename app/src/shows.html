@@ -14,37 +14,32 @@
 						</ol>
 					</div>
 					<div class="container-fluid">
-						<div class="thumb-tiles">
-							<div class="row">
-								<div class="col-xs-6 col-slim-clear">
-									<div class="event-tile">
-										<a href="bio.html">
-											<img src="images/thumb/bio.jpg" alt="" class="img-thumbnail" />
-										</a>
-									</div>
-								</div>
-								<div class="col-xs-3 col-slim-clear">
-									<div class="event-tile">
-										<a href="bio.html">
-											<img src="images/thumb/bio1.jpg" alt="" class="img-thumbnail" />
-										</a>
-									</div>
-								</div>
-								<div class="col-xs-3 col-slim-clear">
-									<div class="event-tile">
-										<a href="bio.html">
-											<img src="images/thumb/bio2.jpg" alt="" class="img-thumbnail" />
-										</a>
-									</div>
-								</div>
-								<div class="col-xs-6 col-slim-clear">
-									<div class="event-tile">
-										<a href="bio.html">
-											<img src="images/thumb/bio1.jpg" alt="" class="img-thumbnail" />
-										</a>
-									</div>
-								</div>
-
+						<div class="grid-wrapper">
+							<div class="grid" data-modules="isotope">
+								@@include('partials/grid-item-event.html', {
+									"width": 2,
+									"date": "Evento, 12.01.2015",
+									"name": "Nome evento 1",
+									"img": "images/thumb/4.jpg"
+								})
+								@@include('partials/grid-item-event.html', {
+									"width": 1,
+									"date": "Evento, 12.01.2015",
+									"name": "Ciao",
+									"img": "images/thumb/2.jpg"
+								})
+								@@include('partials/grid-item-event.html', {
+									"width": 2,
+									"date": "Evento, 12.01.2015",
+									"name": "Nome evento 1",
+									"img": "images/thumb/3.jpg"
+								})
+								@@include('partials/grid-item-event.html', {
+									"width": 1,
+									"date": "Evento, 12.01.2015",
+									"name": "Ciao",
+									"img": "images/thumb/4.jpg"
+								})
 							</div>
 						</div>
 					</div>
