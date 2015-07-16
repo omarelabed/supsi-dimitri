@@ -7,3 +7,10 @@ Front end project for the new [dimitri website](http://www.teatrodimitri.ch/scuo
 ```
 $ gulp
 ```
+
+## tools
+- [npm](https://www.npmjs.com/)
+- [yeoman](http://yeoman.io/) with [gulp-webapp](https://github.com/yeoman/generator-gulp-webapp) generator:
+	- [bower](http://bower.io/)
+	- [gulp](http://gulpjs.com/)
+	- [sass](http://sass-lang.com/)
