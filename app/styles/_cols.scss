@@ -2,7 +2,10 @@
 	width: 100%;
 	position:relative;
 	height: $item-height;
-	overflow: hidden;	
+	overflow: hidden;
+	&.col-item--2 {
+		height: $item-height * 2;
+	}
 }
 .col-events {
 	font-size: $typeface-size-medium;
@@ -14,9 +17,6 @@
 		overflow: hidden;
 		// padding: 0;
 		// min-height: 15em;
-		&.col-item--2 {
-			height: $item-height * 2;
-		}
 		.information {
 			z-index: 2;
 			position: absolute;
@@ -41,9 +41,14 @@
 		img {
 			width: 100%;
 		}
-	}	
+	}
 }
-
+.col-item-content {
+	height: 100%;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
 .col-news, .col-thumbs {
 	font-size: $typeface-size-medium;
 	border-left: 1px dotted $color-light-gray;
@@ -52,7 +57,10 @@
 
 	.col-item {
 		padding: 10px 10px;
-		border-bottom: 1px dotted $color-light-gray;
+		border-top: 1px dotted $gray-base;
+		&:last-child {
+			border-top: 1px dotted $gray-base;
+		}
 		img {
 			width: 25%;
 			float: left;
@@ -82,15 +90,15 @@
 	}
 }
 .col-additional {
-	padding: 10px 10px 0 10px;
+	// padding: 10px 10px 0 10px;
 	font-size: $typeface-size-medium;
 	.col-item {
 		width: 100%;
 		padding: 10px 15px;
-		background-color: $color-light-gray;
 		border-bottom: 1px dotted rgb(255,255,255);
 		.content {
 			min-height: 100%;
+			padding: 1em;
 
 			p.sub-title {
 				font-size: $typeface-size-small;
@@ -113,9 +121,9 @@
 }
 .col-slim {
 	@extend .col-slim-clear;
-	&:not(:first-child) {
-		border-left: 1px dotted #f0f0f0;
-	}
+	// &:not(:first-child) {
+	// 	border-left: 1px dotted #f0f0f0;
+	// }
 	section {
 		margin-bottom: $col-slim-margin-bottom;
 	}
