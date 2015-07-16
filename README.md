@@ -13,4 +13,5 @@ $ gulp
 - [yeoman](http://yeoman.io/) with [gulp-webapp](https://github.com/yeoman/generator-gulp-webapp) generator:
 	- [bower](http://bower.io/)
 	- [gulp](http://gulpjs.com/)
-	- [sass](http://sass-lang.com/)
+- [bootstrap](http://getbootstrap.com/)
+- [sass](http://sass-lang.com/)
