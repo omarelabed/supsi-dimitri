@@ -1,0 +1,43 @@
+.fullscreen-background {
+	background-image: url('../images/thumb/bg.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: rgb(240,240,240);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	background-position:50% 50%\9 !important;
+	width: 100%;
+	min-height: 100%; 
+	position: relative; 
+
+	.information {
+		z-index: 2;
+		position: absolute;
+		max-width: 100%;
+		height: auto;
+		left: 50px; 
+		top: 170px; 
+		color: $color-white;
+
+		p.data {
+			font-size: $typeface-size-small;
+			font-weight: $typeface-weight-regular;
+			margin: 10px 0 0 0;
+		}
+
+	}
+
+	.overlay {
+		@include overlay-background(0.65, 0);
+	}
+
+}
+
+.close-cover {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	font-size: 3em;
+	padding: 0.5em;
+	color: white;
+}

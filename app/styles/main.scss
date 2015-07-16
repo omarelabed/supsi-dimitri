@@ -7,7 +7,13 @@ $icon-font-path: '../fonts/';
 @import "bootstrap-sass/_bootstrap.scss";
 
 // @import "pre";
+
+// setups
 @import "vars";
 @import "base";
+
+// styles
+@import "cover";
+@import "cols";
 @import "grid";
 @import "style";

@@ -42,7 +42,7 @@ $break-extra-large:	1200px;
 $fixed-toolbar-height: 35px;
 $col-slim-margin-bottom: 5em;
 $grid-padding: 0.5em;
-
+$item-height: 175px;
 
 
 /* mixins */
@@ -62,6 +62,15 @@ $grid-padding: 0.5em;
 	// }
 }
 
+@mixin overlay-background($opFrom, $opTo) {
+	background: -moz-linear-gradient(top, rgba(0,0,0,$opFrom) 0%, rgba(0,0,0,$opTo) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,$opFrom)), color-stop(100%,rgba(0,0,0,$opTo))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,$opFrom) 0%,rgba(0,0,0,$opTo) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,$opFrom) 0%,rgba(0,0,0,$opTo) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,$opFrom) 0%,rgba(0,0,0,$opTo) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,$opFrom) 0%,rgba(0,0,0,$opTo) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */			
+}
 
 /*
 @mixin menu-link() {
