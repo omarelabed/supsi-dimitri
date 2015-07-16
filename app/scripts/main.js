@@ -23,7 +23,7 @@ var config = {
 // MODULES //
 
 var helpers = {
-	getHeadersTop : function(){
+	getHeadersTop: function(){
 		var fh = $('.fixed-toolbar').height(),
 			bs = parseInt(config.mediaQueries['$break-medium']);
 		fh = ($(window).width() < bs ? 0 : fh);
@@ -64,7 +64,7 @@ var headers = function(){
 	module.setContentMargin = function(){
 		var top = helpers.getHeadersTop();
 		$('.main-content').css('margin-top', top + 'px');
-	}
+	};
 	return module;
 };
 
@@ -77,14 +77,15 @@ var isotope = function(){
 		} else {
 			$grid = ($grid.hasClass('grid') ? $grid : $grid.find('.grid'));
 		}
-		if ($grid.length === 0) return;
+		if ($grid.length === 0) {
+			return;
+		}
 		module.grid = $grid;
 		module.initIsotope($grid);
 		module.initFilters($grid);
 	};
 	module.initIsotope = function($grid) {
-		$grid.on('layoutComplete', function(event) {
-			var el = $(this);
+		$grid.on('layoutComplete', function() {
 			$(this).siblings('.grid-overlay').fadeOut();
 		});
 		$grid.isotope({
