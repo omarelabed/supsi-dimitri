@@ -11,7 +11,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-	return gulp.src('app/styles/*.scss')
+	return gulp.src('app/styles/**/*.scss')
 	.pipe($.plumber())
 	.pipe($.sourcemaps.init())
 	.pipe($.sass.sync({
@@ -116,10 +116,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
 		'.tmp/fonts/**/*',
 		]).on('change', reload);
 
-	gulp.watch([
-		'app/styles/**/*.scss',
-		'bower_components/bootstrap-sass/assets/**/*.scss'
-		], ['styles']);
+	gulp.watch('app/styles/**/*.scss', ['styles']);
 	gulp.watch('app/fonts/**/*', ['fonts']);
 	gulp.watch('bower.json', ['wiredep', 'fonts']);
 	gulp.watch('app/src/**/*.html', ['fileinclude']);
