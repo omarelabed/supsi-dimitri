@@ -16,7 +16,6 @@ var config = {
 		'$break-extra-large': '1200px'
 	},
 	defaultModules: [
-		'isotope',
 		'headers'
 	]
 };
@@ -73,7 +72,12 @@ var headers = function(){
 var isotope = function(){
 	var module = {};
 	module.init = function($grid){
-		$grid = (typeof $grid === 'undefined' ? $('.grid') : $grid);
+		if (typeof $grid === 'undefined') {
+			$grid = $('.grid');
+		} else {
+			$grid = ($grid.hasClass('grid') ? $grid : $grid.find('.grid'));
+		}
+		if ($grid.length === 0) return;
 		module.grid = $grid;
 		$grid.on('layoutComplete', function(event) {
 			var el = $(this);
@@ -116,7 +120,7 @@ var deployDefaultModules = function(){
 
 // deploy modules on DOM
 var deployDomModules = function() {
-	$('[data-modules').each(function(){
+	$('[data-modules]').each(function(){
 		var moduleNames = $(this).data('modules').split(',');
 		for (var i in moduleNames) {
 			var moduleName = moduleNames[i];
