@@ -48,10 +48,17 @@ var headers = function(){
 	module.init = function($headers){
 		module.headers = $headers;
 		$(window).resize(function(){
-			var top = $('.fixed-menu>nav').height() + $('.fixed-toolbar').height();
-			$('.main-content').css('margin-top', top + 'px');
+			module.setContentMargin();
 		});
+		module.setContentMargin();
 	};
+	module.setContentMargin = function(){
+		var fh = $('.fixed-toolbar').height(),
+			bs = parseInt(config.mediaQueries['$break-medium']);
+		fh = ($(window).width() < bs ? 0 : fh);
+		var top = $('.fixed-menu>nav').height() + fh;
+		$('.main-content').css('margin-top', top + 'px');
+	}
 	return module;
 };
 
@@ -63,7 +70,6 @@ var isotope = function(){
 		module.grid = $grid;
 		$grid.on('layoutComplete', function(event) {
 			var el = $(this);
-			console.log(el);
 			$(this).siblings('.grid-overlay').fadeOut();
 		});
 		$grid.isotope({

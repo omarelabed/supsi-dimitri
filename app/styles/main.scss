@@ -5,4 +5,7 @@ $icon-font-path: '../fonts/';
 // endbower
 
 // @import "pre";
+@import "vars";
+@import "base";
+@import "grid";
 @import "style";

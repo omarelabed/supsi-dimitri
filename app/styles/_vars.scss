@@ -1,0 +1,61 @@
+$background: rgb(255,255,255);
+
+
+/* Typeface */ 
+$typeface: "Helvetica neue", Helvetica, sans-serif;
+$typeface-size-small: 10px;
+$typeface-size-medium: 11.5px;
+$typeface-size-large: 13px;
+$typeface-size-xlarge: 22px;
+$typeface-size-xxlarge: 35px;
+$typeface-size-xxxlarge: 67px;
+$typeface-weight-light: 100;
+$typeface-weight-regular: 300;
+$typeface-weight-bold: 500;
+$typeface-weight-xbold: 800;
+$typeface-height-spacing: 1.3em;
+$typeface-primary-color: rgb(0,0,0);
+
+$fixed-menu-font: bold 12px/18px sans-serif;
+
+/* Colors */ 
+$color-white: rgb(255,255,255);
+$color-black: rgb(0,0,0);
+$color-gray: rgb(100,100,100);
+$color-dark-gray: rgb(30,30,30);
+$color-light-gray: rgb(240,240,240);
+$color-xlight-gray: rgb(240,240,240);
+
+
+/* Custom, iPhone Retina */ 
+$break-extra-small: 320px;
+/* Extra Small Devices, Phones */ 
+$break-small: 480px;
+/* Small Devices, Tablets */
+$break-medium:	768px;
+/* Medium Devices, Desktops */
+$break-large:	992px;
+/* Large Devices, Wide Screens */
+$break-extra-large:	1200px;
+
+/* sizes */
+$fixed-toolbar-height: 35px;
+$col-slim-margin-bottom: 5em;
+$grid-padding: 0.5em;
+
+
+
+/* mixins */
+/*
+@mixin menu-link() {
+	a {
+		text-decoration: none;
+		font: $fixed-menu-font;
+		margin: -15px -20px;
+		padding: 15px 20px;
+		&:hover {
+			color: $color-white;
+		}
+	}
+}
+*/

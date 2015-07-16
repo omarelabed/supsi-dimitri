@@ -1,0 +1,40 @@
+html, body {
+	font-family: $typeface;
+	font-size: $typeface-size-medium;
+	color: $typeface-primary-color;
+	line-height: $typeface-height-spacing;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-weight: $typeface-weight-xbold;
+	line-height: 1em;
+}
+
+h2 {
+	font-size: $typeface-size-xlarge;
+	font-weight: $typeface-weight-xbold;
+}
+
+h3 {
+	font-size: $typeface-size-large;
+}
+
+article {
+	margin: 2em;
+	h1 {
+		font-size: 2em;
+		margin: 2em 0 .5em 0;
+	}
+	h2 {
+		font-size: 1.5em;
+		margin: 2em 0 .5em 0;
+	}
+}
