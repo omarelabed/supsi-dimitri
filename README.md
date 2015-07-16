@@ -10,8 +10,6 @@ $ gulp
 
 ## tools
 - [npm](https://www.npmjs.com/)
-- [yeoman](http://yeoman.io/) with [gulp-webapp](https://github.com/yeoman/generator-gulp-webapp) generator:
-	- [bower](http://bower.io/)
-	- [gulp](http://gulpjs.com/)
+- [yeoman](http://yeoman.io/) with [gulp-webapp](https://github.com/yeoman/generator-gulp-webapp) generator ([bower](http://bower.io/), [gulp](http://gulpjs.com/))
 - [bootstrap](http://getbootstrap.com/)
 - [sass](http://sass-lang.com/)
