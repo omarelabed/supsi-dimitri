@@ -115,7 +115,7 @@ var isotope = function(){
 	};
 	module.initIsotope = function($grid) {
 		$grid.on('layoutComplete', function() {
-			$(this).siblings('.grid-overlay').fadeOut();
+			$(this).siblings('.grid-overlay').fadeOut('slow');
 		});
 		$grid.isotope({
 			itemSelector: '.grid-item',

@@ -9,7 +9,6 @@
 .col-events {
 	font-size: $typeface-size-medium;
 	padding: 0px;
-
 	.col-item {
 		width: 100%;
 		position:relative;
@@ -24,19 +23,15 @@
 			left: 30px; 
 			bottom: 20px; 
 			color: $color-white;
-
 			p.data {
 				font-size: $typeface-size-small;
 				font-weight: $typeface-weight-regular;
 				margin: 10px 0 0 0;
 			}
-
 		}
-
 		.overlay {
 			@include overlay-background(0, 0.65);
 		}
-
 		img {
 			width: 100%;
 		}
@@ -53,7 +48,6 @@
 	border-left: 1px dotted $color-light-gray;
 	border-right	: 1px dotted $color-light-gray;
 	padding: 0;
-
 	.col-item {
 		padding: 10px 10px;
 		border-top: 1px dotted $gray-base;
@@ -134,12 +128,10 @@
 	img {
 		max-width: 100%;
 	}
-
 	h2 {
 		margin-top: 10px;
 	}
-
-	p{
+	p {
 		font-family: $typeface;
 		font-size: $typeface-size-large;
 		font-weight: 300;

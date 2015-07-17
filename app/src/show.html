@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+@@include('partials/head.html')
+<body>
+	@@include('partials/headers.html')
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-events col-slim">
+					<div class="row-information">
+						<ol class="breadcrumb">
+							<li><a href="shows.html">Spettacoli</a></li>
+							<li class="active">Spettacolo X</li>
+						</ol>
+					</div>
+					<div class="col-item col-item--0">
+						<div class="information">
+							<p class="data">Varieté</p>
+							<h2>Spettacolo X</h2>
+							<p class="data">12.01.2015</p>
+						</div>
+						<div class="overlay"></div>
+						<img src="images/thumb/4.jpg">
+						<div class="clearfix"></div>
+					</div>
+
+					<article>
+						<h1>Spettacolo X</h1>
+						<p>L’Accademia Teatro Dimitri è più di una scuola universitaria di teatro: situata nel villaggio di Verscio, a poca distanza dal Monte Verità di Ascona, conosciuto in tutto il mondo per le es- perienze dell’avanguardia artistica di inizio XX° secolo, offre un contesto e un’atmosfera ine- guagliabili.
+							La formazione è incentrata sull’insegnamento del Physical Theatre e il percorso individuale di ogni singolo studente nello sviluppo della propria creatività, personalità e tecniche artistiche. La dimensione raccolta permette una maggiore intensità di scambio e un rapporto più perso- nale con i docenti, la natura infine offre un ambiente libero da limitazioni e regole in cui coltiva- re il proprio talento artistico e la propria sensibiltà umana. <br />
+							Questo è un luogo in cui gli studenti sono immersi nella pratica e ricerca artistica in modo to- tale, stimolati dall’ambiente internazionale che riunisce studenti e docenti provenienti da ben più di 15 paesi diversi.
+						</p>
+						<p>
+							L’Accademia Teatro Dimitri è una scuola professionale di teatro affiliata alla SUPSI (Scuola universitaria professionale della Svizzera italiana), offre corsi di laurea Bachelor, Master e di formazione continua riconosciuti a livello europeo grazie all’allineamento al sistema della rifor- ma degli studi di Bologna. Essa si inserisce nel contesto educativo-formativo dell’avanguardia del teatro contemporaneo basato sull’espressione corporea.
+						</p>
+					</article>
+				</div>
+
+				<div class="col-sm-3 col-slim">
+					@@include('partials/row-information.html', {"text": "Altri spettacoli"})
+					<div class="col-additional">
+						<div class="col-item">
+							<div class="content">
+								<pre>TODO: lista spettacoli</pre>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-slim col-news">
+					@@include('partials/news-content.html', {"height": "0"})
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('partials/footer.html')
+	@@include('partials/scripts.html')
+</body>
+</html>

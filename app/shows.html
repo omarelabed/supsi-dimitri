@@ -68,6 +68,8 @@
 							<li><a href="testimonials.html">Dicono di noi</a></li>
 						</ul>
 					</li>
+					<li><a href="formazione.html">Formazione</a></li>
+<!--
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Formazione<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -78,6 +80,7 @@
 							<li><a href="courses.html">Corsi</a></li>
 						</ul>
 					</li>
+-->
 					<li><a href="shows.html">Spettacoli</a></li>
 					<li><a href="students.html">Studenti</a></li>
 					<li><a href="collabs.html">Collaborazioni</a></li>
@@ -94,19 +97,25 @@
 				<div class="col-sm-8 col-events col-slim">
 					<div class="row-information">
 						<ol class="breadcrumb">
-							<li>Accademia</li>
-							<li class="active">Lo staff</li>
+							<li class="active">Spettacoli</li>
 						</ol>
 					</div>
 					<div class="container-fluid">
-						<div class="grid-wrapper">
-							<div class="grid" data-modules="isotope">
-								<div class="grid-item grid-item--width2">
+						<div class="grid-wrapper" data-modules="isotope">
+							<div class="grid-filters">
+								<a class="grid-filter active" href="javascript:void(0);" data-filter='*'>tutti</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.danza'>danza</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.teatro'>teatro</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.acrobatic'>acrobatic</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.experimental'>experimental</a>
+							</div>
+							<div class="grid grid-lg">
+								<div class="grid-item grid-item--width1 danza">
 	<div class="thumb-tile">
-		<a href="news.html">
+		<a href="show.html">
 			<div class="information">
 				<p class="data">Evento, 12.01.2015</p>
-				<h2>Nome evento 1</h2>
+				<h2>Spettacolo X</h2>
 			</div>
 			<div class="overlay"></div>
 			<img class="img-thumbnail" src="images/thumb/4.jpg">
@@ -114,9 +123,9 @@
 	</div>
 </div>
 
-								<div class="grid-item grid-item--width1">
+								<div class="grid-item grid-item--width1 danza experimental">
 	<div class="thumb-tile">
-		<a href="news.html">
+		<a href="show.html">
 			<div class="information">
 				<p class="data">Evento, 12.01.2015</p>
 				<h2>Ciao</h2>
@@ -127,9 +136,9 @@
 	</div>
 </div>
 
-								<div class="grid-item grid-item--width2">
+								<div class="grid-item grid-item--width1 teatro acrobatic">
 	<div class="thumb-tile">
-		<a href="news.html">
+		<a href="show.html">
 			<div class="information">
 				<p class="data">Evento, 12.01.2015</p>
 				<h2>Nome evento 1</h2>
@@ -140,9 +149,9 @@
 	</div>
 </div>
 
-								<div class="grid-item grid-item--width1">
+								<div class="grid-item grid-item--width1 danza acrobatic">
 	<div class="thumb-tile">
-		<a href="news.html">
+		<a href="show.html">
 			<div class="information">
 				<p class="data">Evento, 12.01.2015</p>
 				<h2>Ciao</h2>
@@ -154,6 +163,7 @@
 </div>
 
 							</div>
+							<div class="grid-overlay"></div>
 						</div>
 					</div>
 				</div>

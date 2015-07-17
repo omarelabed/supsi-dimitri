@@ -146,9 +146,15 @@ footer {
 
 
 // colors
-.bg-yellow {
+.theme-bachelor {
 	background-color: rgb(255, 255, 53);
 }
-.bg-blue {
+.theme-master {
 	background-color: rgb(20, 160, 252);
+}
+.theme-advanced {
+	background-color: #dd55a0;
+}
+.theme-courses {
+	background-color: $color-light-gray;
 }

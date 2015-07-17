@@ -9,38 +9,49 @@
 				<div class="col-sm-8 col-events col-slim">
 					<div class="row-information">
 						<ol class="breadcrumb">
-							<li>Accademia</li>
-							<li class="active">Lo staff</li>
+							<li class="active">Spettacoli</li>
 						</ol>
 					</div>
 					<div class="container-fluid">
-						<div class="grid-wrapper">
-							<div class="grid" data-modules="isotope">
+						<div class="grid-wrapper" data-modules="isotope">
+							<div class="grid-filters">
+								<a class="grid-filter active" href="javascript:void(0);" data-filter='*'>tutti</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.danza'>danza</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.teatro'>teatro</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.acrobatic'>acrobatic</a>,
+								<a class="grid-filter" href="javascript:void(0);" data-filter='.experimental'>experimental</a>
+							</div>
+							<div class="grid grid-lg">
 								@@include('partials/grid-item-event.html', {
-									"width": 2,
+									"width": 1,
 									"date": "Evento, 12.01.2015",
-									"name": "Nome evento 1",
-									"img": "images/thumb/4.jpg"
+									"name": "Spettacolo X",
+									"img": "images/thumb/4.jpg",
+									"tags": "danza"
 								})
 								@@include('partials/grid-item-event.html', {
 									"width": 1,
 									"date": "Evento, 12.01.2015",
 									"name": "Ciao",
-									"img": "images/thumb/2.jpg"
+									"img": "images/thumb/2.jpg",
+									"tags": "danza experimental"
 								})
 								@@include('partials/grid-item-event.html', {
-									"width": 2,
+									"width": 1,
 									"date": "Evento, 12.01.2015",
 									"name": "Nome evento 1",
-									"img": "images/thumb/3.jpg"
+									"img": "images/thumb/3.jpg",
+									"tags": "teatro acrobatic"
 								})
 								@@include('partials/grid-item-event.html', {
 									"width": 1,
 									"date": "Evento, 12.01.2015",
 									"name": "Ciao",
-									"img": "images/thumb/4.jpg"
+									"img": "images/thumb/4.jpg",
+									"tags": "danza acrobatic"
 								})
 							</div>
+							<div class="grid-overlay"></div>
 						</div>
 					</div>
 				</div>
