@@ -1,13 +1,9 @@
 .col-item {
 	width: 100%;
 	position:relative;
-	height: $item-height;
 	overflow: hidden;
-	&.col-item--2 {
-		height: $item-height * 2;
-	}
-	&.col-item--0 {
-		height: auto;
+	@each $n in $col-item--sizes {
+		@include col-item--($n);
 	}
 }
 .col-events {

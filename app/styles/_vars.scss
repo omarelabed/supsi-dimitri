@@ -43,7 +43,7 @@ $fixed-toolbar-height: 35px;
 $col-slim-margin-bottom: 5em;
 $grid-padding: 0.5em;
 $item-height: 175px;
-
+$col-item--sizes: (1, 2, 3);
 
 /* mixins */
 @mixin grid-item-width($n){
@@ -71,6 +71,13 @@ $item-height: 175px;
 	background: linear-gradient(to bottom, rgba(0,0,0,$opFrom) 0%,rgba(0,0,0,$opTo) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */			
 }
+
+@mixin col-item--($n) {
+	&.col-item--#{$n} {
+		height: $item-height * $n;
+	}
+}
+
 
 /*
 @mixin menu-link() {
