@@ -16,6 +16,9 @@ $grid-item-width-lg: $grid-item-width; // 1/3 * 100%
 	width: $grid-item-width;
 	padding: $grid-padding;
 	overflow: hidden;
+	@each $col in $grid-items-cols {
+		@include grid-item-col-($col);
+	}
 }
 .grid-item--width2 {
 	width: $grid-item-width * 2;

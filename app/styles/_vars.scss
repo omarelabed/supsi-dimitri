@@ -44,6 +44,7 @@ $col-slim-margin-bottom: 5em;
 $grid-padding: 0.5em;
 $item-height: 175px;
 $col-item--sizes: (1, 2, 3);
+$grid-items-cols: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 
 /* mixins */
 @mixin grid-item-width($n){
@@ -60,6 +61,11 @@ $col-item--sizes: (1, 2, 3);
 	// .grid-item--height2 {
 	// 	height: $n;
 	// }
+}
+@mixin grid-item-col-($cols) {
+	&.grid-item-col-#{$cols} {
+		width: 12/100 * $cols * 100%;
+	}
 }
 
 @mixin overlay-background($opFrom, $opTo) {

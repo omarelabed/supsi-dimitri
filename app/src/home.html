@@ -34,26 +34,24 @@
 			<div class="col-sm-5 col-events col-slim">
 				@@include('partials/row-information.html', {"text": "Primo piano"})
 				@@include('partials/event-item.html', {
-				"img": "images/thumb/5.jpg",
-				"category": "Evento",
-				"date": "14.09.2015",
-				"name": "Nome evento 1"
+					"img": "images/thumb/5.jpg",
+					"category": "Evento",
+					"date": "14.09.2015",
+					"name": "Nome evento 1"
+				})
+				@@include('partials/event-item.html', {
+					"img": "images/thumb/2.jpg",
+					"category": "Varieté",
+					"date": "13.09.2015",
+					"name": "Nome evento 2"
 
-			})
-			@@include('partials/event-item.html', {
-			"img": "images/thumb/2.jpg",
-			"category": "Varieté",
-			"date": "13.09.2015",
-			"name": "Nome evento 2"
-
-		})
-		@@include('partials/event-item.html', {
-		"img": "images/thumb/4.jpg",
-		"category": "Varieté",
-		"date": "13.09.2015",
-		"name": "Nome evento 3"
-
-	})
+				})
+				@@include('partials/event-item.html', {
+					"img": "images/thumb/4.jpg",
+					"category": "Varieté",
+					"date": "13.09.2015",
+					"name": "Nome evento 3"
+				})
 </div>
 <div class="col-sm-3 col-slim">
 	@@include('partials/row-information.html', {"text": "Formazione"})
