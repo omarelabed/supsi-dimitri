@@ -35,12 +35,41 @@ var helpers = {
 // cover module
 var cover = function(){
 	var module = {};
-	module.init = function($cover){
+	module.init = function($cover) {
+		$cover = (typeof $cover === 'undefined' ? $('.main-cover') : $cover);
 		module.cover = $cover;
-		$cover.css('cursor', 'pointer');
-		$cover.click(function(e){
+		if ($cover.find('.cover-item').length <= 1) {
+			return;
+		}
+		module.initSlide();
+	};
+	module.initSlide = function() {
+		setInterval(function(){
+			module.slide();
+		}, 4000);
+	};
+	module.slide = function(){
+		var $cover = module.cover,
+			$items = $cover.find('.cover-item'),
+			$currentItem = $cover.find('.cover-item.active').fadeOut('fast').removeClass('active'),
+			i = $currentItem.index()+1,
+			j = i % $items.length,
+			$nextItem = $items.eq(j);
+		// $nextItem = ($nextItem.length===0 ? $cover.first('.cover-item') : $nextItem);
+		$nextItem.fadeIn('slow').addClass('active');
+	};
+	return module;
+};
+
+// coverlay module
+var coverlay = function(){
+	var module = {};
+	module.init = function($coverlay){
+		module.coverlay = $coverlay;
+		$coverlay.css('cursor', 'pointer');
+		$coverlay.click(function(e){
 			e.preventDefault();
-			var target = $cover.data('target'),
+			var target = $coverlay.data('target'),
 				diff = helpers.getHeadersTop(),
 				offset = $(target).offset().top - diff;
 			$('html, body').animate({
@@ -110,6 +139,7 @@ var isotope = function(){
 // register modules
 var modules = {
 	cover: cover(),
+	coverlay: coverlay(),
 	headers: headers(),
 	isotope: isotope()
 };

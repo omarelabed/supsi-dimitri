@@ -30,7 +30,7 @@
 
 <div class="container-fluid">
 	<div class="row fixed-toolbar">
-		<div class="col-sm-2 content-language"><a href="#">Italiano</a></div>
+		<div class="col-sm-2 content-language"><a href="#">English</a></div>
 		<div class="col-sm-10">
 			<div class="pull-right">
 				<ul class="list-inline content-social">
@@ -88,19 +88,29 @@
 		</nav>
 	</div>
 </div>
-	<div class="fullscreen-background">
-		<div class="information">
-			<p>Prossimo evento</p>
-			<h1>Nome evento <br />02—14.03</h1>
-			<div class="big-dash"></div>
+	<div class="main-cover" data-modules="cover">
+		<div class="cover-item active" style="background-image:url('../images/thumb/bg.jpg')">
+			<div class="information">
+				<p>Prossimamente</p>
+				<h1>Evento X<br />02—14.03</h1>
+				<div class="big-dash"></div>
+			</div>
 		</div>
-		<div class="overlay" data-modules="cover" data-target="#coverScrolltoHome">
+		<div class="cover-item" style="background-image:url('../images/thumb/bg1.jpg')">
+			<div class="information">
+				<p>Prossimamente</p>
+				<h1>Evento Y<br />04—19.08</h1>
+				<div class="big-dash"></div>
+			</div>
+		</div>
+		<div class="overlay" data-modules="coverlay" data-target="#coverScrolltoHome">
 			<div class="text-center close-cover">
 				<span class="glyphicon glyphicon-menu-down"></span>
 			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
+
 	<div class="container-fluid" id="coverScrolltoHome">
 		<div class="row">
 			<div class="col-sm-4 col-news col-slim">
@@ -108,7 +118,7 @@
 	<h3 class="info-label">News &amp; Events</h3>
 </div>
 
-<div class="col-item">
+<div class="col-item col-item--1">
 	<img src="images/thumb/1.jpg">
 	<div class="content">
 		<p class="data">12.01.2015</p>
@@ -119,7 +129,7 @@
 	<div class="clearfix"></div>
 </div>
 
-<div class="col-item">
+<div class="col-item col-item--1">
 	<img src="images/thumb/2.jpg">
 	<div class="content">
 		<p class="data">12.01.2015</p>
@@ -130,7 +140,7 @@
 	<div class="clearfix"></div>
 </div>
 
-<div class="col-item">
+<div class="col-item col-item--1">
 	<img src="images/thumb/3.jpg">
 	<div class="content">
 		<p class="data">12.01.2015</p>
@@ -141,7 +151,7 @@
 	<div class="clearfix"></div>
 </div>
 
-<div class="col-item">
+<div class="col-item col-item--1">
 	<img src="images/thumb/1.jpg">
 	<div class="content">
 		<p class="data">12.01.2015</p>
@@ -152,7 +162,7 @@
 	<div class="clearfix"></div>
 </div>
 
-<div class="col-item">
+<div class="col-item col-item--1">
 	<img src="images/thumb/2.jpg">
 	<div class="content">
 		<p class="data">12.01.2015</p>
@@ -163,7 +173,7 @@
 	<div class="clearfix"></div>
 </div>
 
-<div class="col-item">
+<div class="col-item col-item--1">
 	<img src="images/thumb/3.jpg">
 	<div class="content">
 		<p class="data">12.01.2015</p>
@@ -195,7 +205,7 @@
 	</a>
 </div>
 
-				<div class="col-item col-item--2">
+			<div class="col-item col-item--2">
 	<a href="news-post.html">
 		<div class="col-item-content" style="background-image:url('images/thumb/2.jpg')">
 			<div class="information">
@@ -209,7 +219,7 @@
 	</a>
 </div>
 
-				<div class="col-item col-item--2">
+		<div class="col-item col-item--2">
 	<a href="news-post.html">
 		<div class="col-item-content" style="background-image:url('images/thumb/4.jpg')">
 			<div class="information">
@@ -223,45 +233,45 @@
 	</a>
 </div>
 
-			</div>
-			<div class="col-sm-3 col-slim">
-				<div class="row-information">
+</div>
+<div class="col-sm-3 col-slim">
+	<div class="row-information">
 	<h3 class="info-label">Formazione</h3>
 </div>
 
-				<div class="col-additional">
-					<div class="col-item col-item--2 bg-yellow">
-						<a href="bachelor.html" title="Bachelor">
-							<div class="content">
-								<p class="sub-title">Procedura di ammissione</p>
-								<p class="title">
-									Bachelor <br />
-									of Arts <br />
-									in Theater
-								</p>
-							</div>
-						</a>
-						<div class="clearfix"></div>
-					</div>
-					<div class="col-item col-item--2 bg-blue">
-						<a href="bachelor.html" title="Bachelor">
-							<div class="content">
-								<p class="sub-title">Procedura di ammissione</p>
-								<p class="title">
-									Bachelor <br />
-									of Arts <br />
-									in Theater
-								</p>
-							</div>
-						</a>
-						<div class="clearfix"></div>
-					</div>
+	<div class="col-additional">
+		<div class="col-item col-item--2 bg-yellow">
+			<a href="bachelor.html" title="Bachelor">
+				<div class="content">
+					<p class="sub-title">Procedura di ammissione</p>
+					<p class="title">
+						Bachelor <br />
+						of Arts <br />
+						in Theater
+					</p>
 				</div>
-			</div>
+			</a>
+			<div class="clearfix"></div>
+		</div>
+		<div class="col-item col-item--2 bg-blue">
+			<a href="bachelor.html" title="Bachelor">
+				<div class="content">
+					<p class="sub-title">Procedura di ammissione</p>
+					<p class="title">
+						Bachelor <br />
+						of Arts <br />
+						in Theater
+					</p>
+				</div>
+			</a>
+			<div class="clearfix"></div>
 		</div>
 	</div>
-	<footer></footer>
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+</div>
+</div>
+</div>
+<footer></footer>
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
 		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

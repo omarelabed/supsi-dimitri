@@ -6,6 +6,9 @@
 	&.col-item--2 {
 		height: $item-height * 2;
 	}
+	&.col-item--0 {
+		height: auto;
+	}
 }
 .col-events {
 	font-size: $typeface-size-medium;
