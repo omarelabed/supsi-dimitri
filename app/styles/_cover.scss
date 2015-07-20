@@ -73,7 +73,7 @@
 .cover-item {
 	background-size: cover;
 	background-position: center center;
-  	position: absolute;
+  	position: fixed;
 	width: 100%;
 	height: 100%;
 	display: none;
@@ -89,4 +89,18 @@
 	font-size: 3em;
 	padding: 0.5em;
 	color: white;
+}
+
+.content-wrapper {
+    position: relative;
+}
+
+.background-fix {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
 }

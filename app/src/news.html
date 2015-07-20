@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="">
+@@include('partials/head.html')
+<body>
+	@@include('partials/headers.html')
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-8 col-events col-slim">
+					<div class="row-information">
+						<ol class="breadcrumb">
+							<li>Accademia</li>
+							<li class="active">Lo staff</li>
+						</ol>
+					</div>
+					<div class="container-fluid">
+						@@include('partials/grid-staff.html')
+					</div>
+				</div>
+				<div class="col-sm-4 col-slim col-news">
+					@@include('partials/news-content.html')
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('partials/footer.html')
+	@@include('partials/scripts.html')
+</body>
+</html>

@@ -26,7 +26,8 @@
 		<div class="clearfix"></div>
 	</div>
 
-	<div class="container-fluid" id="coverScrolltoHome">
+	<div class="container-fluid content-wrapper" id="coverScrolltoHome">
+		<div class="background-fix"></div>
 		<div class="row">
 			<div class="col-sm-4 col-news col-slim">
 				@@include('partials/news-content.html', {"height": "1"})
@@ -52,11 +53,13 @@
 					"date": "13.09.2015",
 					"name": "Nome evento 3"
 				})
-</div>
-<div class="col-sm-3 col-slim">
-	@@include('partials/row-information.html', {"text": "Formazione"})
-	@@include('partials/curricula-tiles.html')
-</div>
+			</div>
+			<div class="col-sm-3 col-slim">
+				@@include('partials/row-information.html', {"text": "Formazione"})
+				@@include('partials/curricula-tiles.html')
+			</div>
+		</div>
+	</div>
 @@include('partials/footer.html')
 @@include('partials/scripts.html')
 </body>

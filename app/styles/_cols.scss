@@ -113,6 +113,7 @@
 	margin-bottom: $col-slim-margin-bottom;
 }
 .col-slim {
+	background-color: #fff;
 	@extend .col-slim-clear;
 	// &:not(:first-child) {
 	// 	border-left: 1px dotted #f0f0f0;
