@@ -6,7 +6,7 @@
 	<div class="main-content">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-5 col-events col-slim">
+				<div class="col-md-6 col-events col-slim">
 					<div class="row-information">
 						<ol class="breadcrumb">
 							<li class="active">Formazione</li>
@@ -36,12 +36,12 @@
 					</article>
 				</div>
 
-				<div class="col-sm-3 col-slim">
+				<div class="col-sm-6 col-md-3 col-slim">
 					@@include('partials/row-information.html', {"text": "Programmi"})
-					@@include('partials/curricula-tiles.html')
+					@@include('partials/curricula-tiles.html', {"height": 2})
 				</div>
-				<div class="col-sm-4 col-slim col-news">
-					@@include('partials/news-content.html')
+				<div class="col-sm-6 col-md-3 col-slim col-news">
+					@@include('partials/news-content.html', {"height": 1})
 				</div>
 			</div>
 		</div>

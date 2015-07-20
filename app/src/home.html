@@ -29,10 +29,10 @@
 	<div class="container-fluid content-wrapper" id="coverScrolltoHome">
 		<div class="background-fix"></div>
 		<div class="row">
-			<div class="col-sm-4 col-news col-slim">
+			<div class="col-md-4 col-news col-slim hidden-sm">
 				@@include('partials/news-content.html', {"height": "1"})
 			</div>
-			<div class="col-sm-5 col-events col-slim">
+			<div class="col-sm-7 col-md-5 col-events col-slim">
 				@@include('partials/row-information.html', {"text": "Primo piano"})
 				@@include('partials/event-item.html', {
 					"img": "images/thumb/5.jpg",
@@ -53,10 +53,21 @@
 					"date": "13.09.2015",
 					"name": "Nome evento 3"
 				})
+				@@include('partials/event-item.html', {
+					"img": "images/thumb/5.jpg",
+					"category": "Evento",
+					"date": "14.09.2015",
+					"name": "Nome evento 1"
+				})
 			</div>
-			<div class="col-sm-3 col-slim">
+			<div class="col-sm-5 col-md-3 col-slim">
 				@@include('partials/row-information.html', {"text": "Formazione"})
-				@@include('partials/curricula-tiles.html')
+				@@include('partials/curricula-tiles.html', {"height": 2})
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-news col-slim visible-sm">
+				@@include('partials/news-content.html', {"height": "1"})
 			</div>
 		</div>
 	</div>
