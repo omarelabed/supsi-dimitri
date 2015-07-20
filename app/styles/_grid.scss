@@ -1,6 +1,6 @@
 $grid-item-width: 1/3 * 100%;
-$grid-item-width-sm-100: 1/4 * 100%;
-$grid-item-width-md: 1/2 * 100%;
+$grid-item-width-sm: 1/4 * 100%;
+$grid-item-width-md: 1/5 * 100%;
 $grid-item-width-lg: $grid-item-width; // 1/3 * 100%
 
 /* isotope */
@@ -54,7 +54,7 @@ $grid-item-width-lg: $grid-item-width; // 1/3 * 100%
 }
 
 @media screen and (min-width: $break-small+100) {
-	@include grid-item-width($grid-item-width-sm-100)
+	@include grid-item-width($grid-item-width-sm)
 }
 @media (min-width: $break-medium) {
 	@include grid-item-width($grid-item-width-md)
