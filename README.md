@@ -1,4 +1,4 @@
-> *NOTE:* Project moved to [lcv-idlab](https://github.com/lcv-idlab/)/*[dimitri-frontend](https://github.com/lcv-idlab/dimitri-frontend)*.
+> **NOTE:** Project moved to [lcv-idlab](https://github.com/lcv-idlab/)/**[dimitri-frontend](https://github.com/lcv-idlab/dimitri-frontend)**.
 
 # supsi-dimitri
 Front end project for the new [dimitri website](http://www.teatrodimitri.ch/scuola/).
