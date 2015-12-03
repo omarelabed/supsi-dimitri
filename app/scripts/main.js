@@ -17,11 +17,17 @@ var config = {
 	},
 	defaultModules: [
 		'headers'
-	]
+	],
+	api: {
+		staff: {
+			all: 'http://localhost:8888/staff.php'
+		}
+	}
 };
 
 // MODULES //
 
+// helpers
 var helpers = {
 	getHeadersTop: function(){
 		var fh = $('.fixed-toolbar').height(),
@@ -135,13 +141,28 @@ var isotope = function(){
 	return module;
 };
 
+// staff
+var staff = function(){
+	var module = {};
+	module.init = function($el){
+		console.log($el);
+		module.fetchStaffJson();
+	};
+	module.fetchStaffJson = function(){
+		$.getJSON(config.api.staff.all, function(data){
+			console.log(data);
+		});
+	};
+	return module;
+};
 
 // register modules
 var modules = {
 	cover: cover(),
 	coverlay: coverlay(),
 	headers: headers(),
-	isotope: isotope()
+	isotope: isotope(),
+	staff: staff()
 };
 
 
@@ -166,7 +187,7 @@ var deployDefaultModules = function(){
 // deploy modules on DOM
 var deployDomModules = function() {
 	$('[data-modules]').each(function(){
-		var moduleNames = $(this).data('modules').split(',');
+		var moduleNames = $(this).data('modules').split(' ');
 		for (var i in moduleNames) {
 			var moduleName = moduleNames[i];
 			deployModule(moduleName, $(this));
